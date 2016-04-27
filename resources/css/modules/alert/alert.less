@@ -1,0 +1,42 @@
+.alert {
+
+  &--container {
+    .container();
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media(min-width: @sm-min) {
+      .align-items(end);
+      padding-left: 5.5rem;
+      padding-right: 5.5rem;
+    }
+
+    @media(min-width: @lg-min) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .alert__announcement {
+      background-color: @red;
+      border-radius: .5rem;
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    .alert__announcement--message {
+      color: @white;
+      margin: 0;
+      padding: 1.6rem 0;
+
+      span {
+        display: block;
+
+        @media(min-width: @sm-min) {
+          display: inline-block;
+        }
+      }
+
+    }
+  }
+
+}
