@@ -1,20 +1,19 @@
 .alert {
 
+  margin: 0 1.5rem;
+  padding: 0 0 1.4rem;
+
+  @media(min-width: @sm-min) {
+    //margin: 0 5rem;
+    padding: 0 0 1.2rem;
+  }
+
+  @media(min-width: @lg-min) {
+    margin: 0;
+  }
+
   &--container {
     .container();
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    @media(min-width: @sm-min) {
-      .align-items(end);
-      padding-left: 5.5rem;
-      padding-right: 5.5rem;
-    }
-
-    @media(min-width: @lg-min) {
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
 
     .alert__announcement {
       background-color: @red;

@@ -1,0 +1,41 @@
+.hero {
+
+  margin: 0 1.5rem;
+  padding: 0 0 1.4rem;
+
+  @media(min-width: @sm-min) {
+    //margin: 0 5rem;
+  }
+
+  @media(min-width: @lg-min) {
+    margin: 0;
+  }
+
+  &--container {
+    .container();
+  }
+
+  .hero__content {
+      background-color: rgb(0, 166, 207);
+      background-image: -webkit-linear-gradient(348deg, rgb(139, 199, 235) 0%, rgb(0, 166, 207) 40%, rgb(0, 166, 207) 100%);
+      background-image: -o-linear-gradient(348deg, rgb(139, 199, 235) 0%, rgb(0, 166, 207) 40%, rgb(0, 166, 207) 100%);
+      background-image: linear-gradient(78deg, rgb(139, 199, 235) 0%, rgb(0, 166, 207) 40%, rgb(0, 166, 207) 100%);
+      border-radius: 1rem;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      padding: 1rem 2rem;
+
+      &:before {
+        content: "";
+        display: block;
+        background: url("../imgs/pattern-small.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 38%;
+      }
+  }
+
+}

@@ -1,6 +1,7 @@
 .header__nav {
 
   width: auto;
+  transition: 0.3s all ease-in;
 
   @media(min-width: @md-min) {
     width: auto;
@@ -15,6 +16,7 @@
     .flexbox();
     .justify-content(space-between);
     .align-items(center);
+    transition: 0.3s all ease-in;
 
     @media(min-width: @md-min) {
       .justify-content(end);
@@ -30,6 +32,7 @@
       line-height: 1.2;
       margin: 0;
       display: none;
+      transition: 0.3s all ease-in;
 
       @media(min-width: @sm-min) {
         display: block;
@@ -45,6 +48,7 @@
     .top__nav--toggle {
 
       display: none;
+      transition: 0.3s all ease-in;
 
       @media(min-width: @lg-min) {
         display: block;
@@ -62,6 +66,7 @@
         line-height: 1.2;
         float: left;
         .font-bold;
+        transition: 0.3s all ease-in;
 
         &.btn-toggle-consumers {
           background-color: @blue-green;

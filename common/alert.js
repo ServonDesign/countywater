@@ -1,4 +1,4 @@
-var Pagealert = React.createClass({
+var PageAlert = React.createClass({
     render: function() {
         return (
             <div className="alert--container">
@@ -10,5 +10,5 @@ var Pagealert = React.createClass({
     }
 });
 
-var renderedToStaticMarkup = React.renderToStaticMarkup(<Pagealert/>);
+var renderedToStaticMarkup = React.renderToStaticMarkup(<PageAlert/>);
 document.getElementById('page-alert').innerHTML = renderedToStaticMarkup;

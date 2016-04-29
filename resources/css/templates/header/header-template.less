@@ -1,0 +1,42 @@
+.header {
+
+  margin: 0 1.5rem;
+  padding: 2.2rem 0;
+
+  @media(min-width: @sm-min) {
+    //margin: 0 5rem;
+  }
+
+  @media(min-width: @lg-min) {
+    margin: 0;
+  }
+
+  .header--container {
+    .container();
+    .justify-content(space-between);
+    .align-items(center);
+
+    @media(min-width: @sm-min) {
+      .align-items(end);
+
+    }
+
+    @media(min-width: @lg-min) {
+
+    }
+
+    .header__btn--call {
+      display: block;
+      @media(min-width: @sm-min) {
+        display: none;
+      }
+
+      svg {
+        fill: @blue;
+        width: 4.6rem;
+        height: 4.0rem;
+      }
+    }
+  }
+
+}
