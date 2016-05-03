@@ -35,6 +35,20 @@
       .flex-direction(row);
     }
 
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: @white;
+      margin-right: 0.5rem;
+      position: relative;
+      top: 1px;
+      display: inline-block;
+
+      @media(min-width: @sm-min) {
+        display: none;
+      }
+    }
+
     &.isHidden {
       max-height: 0;
 
@@ -47,8 +61,12 @@
   &__copyright {
     border-top: 1px solid @white;
     text-align: center;
-    margin: 0 2rem;
+    margin: 0 -2rem;
     padding-top: 2.7rem;
+
+    @media(min-width: @sm-min) {
+      margin: 0 2rem;
+    }
     span {
       display: block;
     }
@@ -58,6 +76,7 @@
 
     .flexbox();
     .justify-content(space-between);
+    .align-items(center);
     font-size: 1.8rem;
     font-family: 'bariol bold';
     margin-bottom: 2rem;

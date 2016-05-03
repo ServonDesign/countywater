@@ -5,12 +5,28 @@
     width: 100%;
     margin: 0 auto 1.2rem;
 
+    h2.portlet__title {
+      font-size: 3.2rem;
+    }
+
+    h3.portlet__title {
+      font-size: 2.3rem;
+    }
+
+    h4.portlet__title {
+      font-size: 1.9rem;
+    }
+
     &-small {
 
       height: 6rem;
 
       @media(min-width: @sm-min) {
         height: 12rem;
+      }
+
+      @media(min-width: @lg-min) {
+        height: 6rem;
       }
 
       .portlet__container {
@@ -25,7 +41,11 @@
     }
 
     &-main {
-      height: 12rem;
+      height: auto;
+
+      @media(min-width: @sm-min) {
+        height: 12rem;
+      }
 
       .portlet__container {
         padding: 1.5rem 1.5rem;
@@ -50,6 +70,7 @@
 
     .portlet__description {
         font-size: 1.6rem;
+        margin-bottom: 0;
         svg {
             width: 1.6rem;
             height: 1.6rem;
@@ -66,6 +87,52 @@
 
     svg {
       fill: @white;
+    }
+
+    h3+ul {
+      padding-top: 1.6rem;
+    }
+
+    h3+.portlet__description {
+      padding-top: 0.3rem;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 1.9rem;
+        color: @white;
+      }
+
+      svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: @white;
+        margin-right: 0.5rem;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    a {
+      color: @white;
+      text-decoration: none;
+
+     svg {
+       width: 1.4rem;
+       height: 1.4rem;
+       fill: @white;
+       margin-right: 0.5rem;
+       display: inline-block;
+       vertical-align: middle;
+     }
     }
 
     //types of portlet
@@ -106,6 +173,72 @@
     }
 }
 
+.portlet-faq-head {
+  .portlet__title {
+    color: @blue-darkest;
+  }
+}
+
+.portlet-faq {
+  cursor: pointer;
+
+  .portlet__container {
+    .flex-direction(row-reverse);
+    .align-items(baseline);
+  }
+
+  .portlet__content {
+    width: 95%;
+    overflow-y: hidden;
+
+    @media(min-width: @sm-min) {
+      width: 95%;
+    }
+
+    @media(min-width: @md-min) {
+      width: 97%;
+    }
+
+    .portlet__title {
+      color: @blue-darkest;
+    }
+
+    .portlet__answer {
+      max-height: 0rem;
+      height: 0;
+      margin: 0;
+      color: @main-content;
+      transition: 0.3s all ease-in;
+
+      p:first-child {
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  .portlet__icon {
+    height: 1.8rem;
+    margin-right: 0.5rem;
+
+    @media(min-width: @md-min) {
+      margin-right: 0;
+    }
+    
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  &.isActive {
+    .portlet__answer {
+      max-height: 12rem;
+      height: auto;
+      margin: 0;
+    }
+  }
+}
+
 .portlet-green {
   background-color: @green;
 }
@@ -118,10 +251,75 @@
   background-color: @blue-dark;
 }
 
+.portlet-blue-light {
+  background-color: @blue-light;
+}
+
+.portlet-blue-green {
+  background-color: @blue-green;
+}
+
 .portlet-blue {
   background-color: @blue;
 }
 
 .portlet-orange {
   background-color: @orange;
+}
+
+.portlet-main-content {
+  background-color: @main-content-bg;
+}
+
+.portlet-blue-dim {
+  background-color: @blue-dim;
+}
+
+
+// portlet inside main content
+.main__content {
+
+  p {
+    color: @main-content;
+  }
+
+  .portlet h2,
+  .portlet h4 {
+    color: @blue-darkest;
+  }
+}
+
+.main__subcontent {
+  .flexbox();
+  .flex-wrap(wrap);
+
+  @media(min-width: @md-min) {
+    .flex-wrap(nowrap);
+  }
+
+  & > .portlet {
+    height: auto;
+    position: relative;
+    margin-right: 0;
+
+    @media(min-width: @md-min) {
+      margin-right: 2rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .portlet__icon {
+      position: absolute;
+      right: 1rem;
+    }
+
+    p {
+      margin-top: 0.66rem;
+      margin-bottom: 0.66rem;
+    }
+  }
+
+
 }
