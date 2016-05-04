@@ -64,11 +64,24 @@
     margin: 0 -2rem;
     padding-top: 2.7rem;
 
+    @media(min-width: @xs-min) {
+      //margin: 0 2rem;
+    }
+
     @media(min-width: @sm-min) {
       margin: 0 2rem;
     }
     span {
       display: block;
+
+      &:first-child {
+        margin-bottom: 1.2rem;
+
+        @media(min-width: @md-min) {
+          margin-bottom: 0;
+        }
+            
+      }
     }
   }
 

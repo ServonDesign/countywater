@@ -1,4 +1,5 @@
 import $ from "./../vendor/jquery/dist/jquery";
+import slick from "./../vendor/slick/slick.js";
 import Handlebars from "handlebars";
 import {sum, square, MyClass} from "./import";
 
