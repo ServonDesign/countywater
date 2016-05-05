@@ -1,6 +1,4 @@
 import $ from "./../vendor/jquery/dist/jquery";
-import slick from "./../vendor/slick/slick.js";
-import Handlebars from "handlebars";
 import {sum, square, MyClass} from "./import";
 
 $(document).ready(init);
@@ -29,4 +27,14 @@ function runImportedFunctions(){
 
 	console.log($.fn);
 
+	console.log("test");
+
+	$(".links-toggle").on("click",function() {
+		$(".footer__links").toggleClass("isHidden");
+	});
+
+	$(".portlet-faq").on("click", function(e) {
+		$(".portlet-faq").removeClass("isActive");
+		$(e.target).closest(".portlet-faq").addClass("isActive");
+	});
 }

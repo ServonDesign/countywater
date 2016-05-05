@@ -14,16 +14,6 @@
 	================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-
-	<!-- CDN scripts-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom-server.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.1/JSXTransformer.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react-with-addons.js"></script>
 	<!-- ================================================== -->
 
 	<!-- CSS
@@ -481,8 +471,64 @@
 			</symbol>
 		</svg>
 	</div>
-	<header id="header" class="header"></header>
-	<section id="page-alert" class="alert"></section>
+	
+	<header id="header" class="header">
+		<div class="header--container">
+			<div class="header__btn--call">
+				<a href="#">
+					<svg>
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-call"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="header__brand">
+				<img src="./resources/imgs/county-water-logo-01.svg" alt="County Water" />
+			</div>
+			<div class="header__nav">
+				<div class="header__nav--top">
+					<h3 class="contact--nav">Customer Services  01234 567 8901</h3>
+					<div class="top__nav--toggle">
+						<button class="btn btn-toggle btn-toggle-business">Business</button>
+						<button class="btn btn-toggle btn-toggle-consumers">Consumers</button>
+					</div>
+				</div>
+				<div class="header__nav--main">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">Register</a>
+						</li>
+						<li>
+							<a href="#">Your Account</a>
+						</li>
+						<li>
+							<a href="#">About Us</a>
+						</li>
+						<li>
+							<a href="#">Contact Us</a>
+						</li>
+					</ul>
+					<div class="header__nav--menu">
+						<a href="#">
+							<svg>
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-bold"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="page-alert" class="alert">
+		<div class="alert--container">
+			<div class="alert__announcement">
+				<h4 class="alert__announcement--message">Latest announcements: <span>Heyfor Road - No water & low pressure</span></h4>
+			</div>
+		</div>
+	</section>
 
 	<section id="main-content" class="main-section">
 		<div class="main--container">
@@ -675,14 +721,6 @@
 	<!-- scripts
 	================================================== -->
 	<script src="resources/js/dist/main.min.js"></script>
-	<script type="text/babel" src="./common/header.js"></script>
-	<script type="text/babel" src="./common/alert.js"></script>
-
-	<script>
-		$(".links-toggle").on("click",function() {
-			$(".footer__links").toggleClass("isHidden");
-		});
-	</script>
 </body>
 
 </html>
