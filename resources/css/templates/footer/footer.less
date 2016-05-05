@@ -29,7 +29,13 @@
 
     @media(min-width: @sm-min) {
       padding-bottom: 2.7rem;
+      .flex-direction(row); 
     }
+
+    @media(min-width: @md-min) {
+      .flex-direction(row); 
+    }
+        
 
     @media(min-width: @md-min) {
       .flex-direction(row);
@@ -71,11 +77,21 @@
     @media(min-width: @sm-min) {
       margin: 0 2rem;
     }
+
+    a {
+      color: @white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     span {
       display: block;
 
       &:first-child {
-        margin-bottom: 1.2rem;
+        //margin-bottom: 1.2rem;
 
         @media(min-width: @md-min) {
           margin-bottom: 0;
@@ -118,7 +134,12 @@
     }
 
     &:last-child {
-      width: 34rem;
+      width: auto;
+
+      @media(min-width: @md-min) {
+        width: 34rem;
+      }
+          
     }
 
     li {
@@ -126,7 +147,7 @@
       margin-bottom: 0.8rem;
 
       @media(min-width: @sm-min) {
-        margin-bottom: 1.4rem;
+        //margin-bottom: 1.4rem;
       }
 
       &:first-child {
@@ -137,6 +158,10 @@
     a {
       text-decoration: none;
       color: @white;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
