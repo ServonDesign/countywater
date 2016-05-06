@@ -375,7 +375,7 @@
   background-color: @main-content-bg;
 
   &:hover {
-  	background-color: darken(desaturate(@main-content-bg, 3%), 5%); 
+  	//background-color: darken(desaturate(@main-content-bg, 3%), 5%); 
   }
 }
 
@@ -385,6 +385,20 @@
   &:hover {
   	background-color: darken(desaturate(@blue-dim, 3%), 5%); 
   }
+}
+
+.portlet-faq {
+  //background-color: @blue-dim;
+
+  &:hover {
+  	background-color: darken(desaturate(@main-content-bg, 3%), 5%); 
+  }
+}
+
+.portlet-bill:first-child {
+	&:hover {
+		background-color: @blue-green; 
+	}
 }
 
 
