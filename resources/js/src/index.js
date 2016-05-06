@@ -1,5 +1,6 @@
 import $ from "./../vendor/jquery/dist/jquery";
 import {sum, square, MyClass} from "./import";
+import "./../vendor/mmenu.min";
 
 $(document).ready(init);
 
@@ -8,26 +9,27 @@ function init(){
 }
 
 function runImportedFunctions(){
-	// 25
-	console.log(square(5));
+	
+	const nav = $(".js-primary-nav");
 
-	var cred = {
-		name: "Ritesh Kumar",
-		enrollmentNo: 11115078
-	};
+	nav.mmenu({
+		offCanvas: {
+			position: "left",
+			zposition: "front"
+		}
+	});
 
-	var x = new MyClass(cred);
+	nav.find('.mm-navbar').append('<button class="primary-nav__mobile-btn-close js-primary-nav-btn-close">x</button>');
 
-	//Ritesh Kumar
-	console.log(x.getName());
+	const navBtn = $(".header__nav--menu");
+	navBtn.on('click', function(){
+		nav.data('mmenu').open();
+	});
 
-	console.log(sum(4,5));
-
-	console.log($([]));
-
-	console.log($.fn);
-
-	console.log("test");
+	const navBtnBlose = $(".js-primary-nav-btn-close");
+	navBtnBlose.on('click', function(){
+		nav.data('mmenu').close();
+	});
 
 	$(".links-toggle").on("click",function() {
 		$(".footer__links").toggleClass("isHidden");
