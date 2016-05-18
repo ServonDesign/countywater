@@ -154,4 +154,4 @@ gulp.task('hb', function () {
 });
 
 gulp.task('build', ['browserify', 'less']);
-gulp.task('watch', ['styleguide', 'watchify', 'watchLess']);
+gulp.task('watch', ['styleguide', 'watchify', 'watchLess', 'hb']);

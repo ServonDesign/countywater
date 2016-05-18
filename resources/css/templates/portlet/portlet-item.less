@@ -95,6 +95,19 @@
 	}
 	.portlet__icon {
 		height: 3.2rem;
+		width: 5.5rem;
+		
+    	text-align: center;
+
+    	@media(min-width: @sm-min) {
+    		width: auto; 
+    	}
+
+    	@media(min-width: @md-min) {
+    		width: 5.5rem;
+    	}
+    	    
+
 		svg {
 			width: 3.2rem;
 			height: 3.2rem;
@@ -169,6 +182,20 @@
 		padding-right: 6rem;
 	  }
 
+	  .portlet__icon {
+		  svg {
+
+		  	width: 3.2rem;
+			height: 4.4rem;
+
+		  	@media(min-width: @sm-min) {
+		  		width: 5rem;
+			  	height: 4.4rem; 
+		  	}
+		  	    
+		  }
+	  }
+
 	  .portlet__description svg {
 		display: none;
 		@media(min-width: @md-min) {
@@ -215,8 +242,8 @@
 	  }
 
 	  .portlet__icon {
-		position: absolute;
-		right: 0;
+		//position: absolute;
+		//right: 0;
 
 		@media(min-width: @md-min) {
 		  right: 1.5rem;
