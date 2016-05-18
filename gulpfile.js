@@ -23,7 +23,8 @@ var gulp = require('gulp'),
     chalk = require('chalk'),
     svgstore = require('gulp-svgstore'),
     cheerio = require('gulp-cheerio'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    handlebars = require('gulp-compile-handlebars');
 
 
 gulp.task('less', function() {
@@ -128,6 +129,28 @@ gulp.task('icons', function() {
             parserOptions: { xmlMode: true }
         }))
         .pipe(gulp.dest('./resources/imgs/svg/'))
+});
+
+
+gulp.task('hb', function () {
+    var templateData = {
+        
+    },
+    options = {
+        ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false 
+        partials : {
+            footer : '<footer>the end</footer>'
+        },
+        batch : ['./common/partials'],
+    }
+
+    return gulp.src('./common/*.handlebars')
+        .pipe(handlebars(templateData, options))
+        .pipe(rename(function(path) {
+            console.log(path.basename + path.extname);
+            path.extname = '.html';
+        }))
+        .pipe(gulp.dest('./html'));
 });
 
 gulp.task('build', ['browserify', 'less']);
