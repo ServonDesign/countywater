@@ -1,12 +1,14 @@
 .portlets {
 
+  //margin: 0 1.5rem;
+
   @media(min-width: @sm-min) {
     padding: 0 0 1.2rem;
+    margin: 0 5rem;
   }
 
   @media(min-width: @lg-min) {
     margin: 0;
-    padding: 0;
   }
 
   &--container {
@@ -14,7 +16,7 @@
     .justify-content(space-between);
 
     @media(min-width: @lg-min) {
-      padding: 0 15px;
+      padding: 0;
     }
   }
 
@@ -26,9 +28,13 @@
     .column-m(12, sm);
     .column-m(12, md);
     .column-m(4, lg);
+    width: 100%;
+    
 
     @media(min-width: @sm-min) {
       .flex-direction(row);
+      width: 100%;
+      margin: 0;
 
       .portlet:first-child {
         margin-right: 0.75rem;
@@ -40,7 +46,16 @@
     }
 
     @media(min-width: @lg-min) {
+      width: 36rem;
       .flex-direction(column);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       .portlet:first-child {
         margin-right: 0;
@@ -48,6 +63,7 @@
 
       .portlet:last-child {
         margin-left: 0;
+        margin-bottom: 0;
       }
     }
 

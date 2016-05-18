@@ -1,5 +1,11 @@
 .header__brand {
-  width: 20%;
+  min-width: 10rem;
+  min-height: 10rem;
+
+  @media(min-width: @sm-min) {
+    width: 20%; 
+  }
+      
 
   img {
 

@@ -6,8 +6,17 @@
   font-size: 1.3rem;
   color: @white;
 
+  @media(min-width: @sm-min) {
+    margin: 0 5rem; 
+  }
+
+  @media(min-width: @lg-min) { 
+    margin: 0;  
+  }
+      
   &--container {
     .container();
+    padding: 0 !important;
   }
 
   &__content {

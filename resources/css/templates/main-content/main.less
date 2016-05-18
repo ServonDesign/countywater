@@ -3,7 +3,7 @@
   //padding: 0 0 1.4rem;
 
   @media(min-width: @sm-min) {
-    margin: 0 1.5rem;
+    margin: 0 5rem;
   }
 
   @media(min-width: @lg-min) {
@@ -13,7 +13,7 @@
 
 .main--container {
   .container();
-
+  padding: 0 !important;
 
   flex-wrap: wrap;
   flex-direction: column-reverse;
@@ -21,6 +21,15 @@
   @media(min-width: @md-min) {
     flex-wrap: nowrap;
     flex-direction: row;
+  }
+}
+
+.main__subcontent {
+  .portlet__title {
+    @media(min-width: @md-min) {
+      padding-right: 5rem; 
+    }
+        
   }
 }
 
