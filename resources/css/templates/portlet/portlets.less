@@ -3,7 +3,7 @@
   //margin: 0 1.5rem;
 
   @media(min-width: @sm-min) {
-    padding: 0 0 1.2rem;
+    //padding: 0 0 1.2rem;
     margin: 0 5rem;
   }
 
@@ -29,25 +29,31 @@
     .column-m(12, md);
     .column-m(4, lg);
     width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    //margin-bottom: 1.2rem;
     
 
     @media(min-width: @sm-min) {
       .flex-direction(row);
       width: 100%;
-      margin: 0;
+      margin: 0 0 1.2rem;
 
       .portlet:first-child {
         margin-right: 0.75rem;
+        margin-bottom: 0;
       }
 
       .portlet:last-child {
         margin-left: 0.75rem;
+        margin-bottom: 0;
       }
     }
 
     @media(min-width: @lg-min) {
       width: 36rem;
       .flex-direction(column);
+      margin: 0;
 
       &:first-child {
         margin-left: 0;
@@ -59,11 +65,12 @@
 
       .portlet:first-child {
         margin-right: 0;
+        margin-bottom: 1.2rem;
       }
 
       .portlet:last-child {
         margin-left: 0;
-        margin-bottom: 0;
+        margin-bottom: 1.2rem;
       }
     }
 
