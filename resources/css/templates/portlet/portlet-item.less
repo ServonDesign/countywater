@@ -27,12 +27,17 @@
 
 	  height: 6rem;
 
-	  @media(min-width: @sm-min) {
-		height: 12rem;
+	  @media(min-width: @xs-min) {
+		height: 9.2rem;
 	  }
 
+	  @media(min-width: @md-min) {
+	  	height: 9.2rem;
+	  }
+	      
+
 	  @media(min-width: @lg-min) {
-		height: 6rem;
+		height: 5.5rem;
 	  }
 
 	  .portlet__container {
@@ -42,7 +47,7 @@
 
 	  svg {
 		width: 3.2rem;
-		height: 3.2rem
+		height: 3.2rem;
 	  }
 	}
 
@@ -50,11 +55,16 @@
 	  height: auto;
 
 	  @media(min-width: @sm-min) {
-		height: 12rem;
+		height: 9.2rem;
 	  }
 
+	  @media(min-width: @md-min) {
+	  	height: 9.2rem;
+	  }
+	      
+
 	  .portlet__container {
-		padding: 1.5rem 1.5rem;
+		padding: 0.8rem 1.5rem 1rem;
 	  }
 
 	  .portlet__title {
@@ -85,19 +95,25 @@
 	}
 
 	.portlet__description {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		margin-bottom: 0;
 		svg {
 			width: 1.6rem;
 			height: 1.6rem;
 			vertical-align: middle;
 		}
+
+		@media(min-width: @md-min) {
+			font-size: 1.6rem;
+		}
+		    
 	}
 	.portlet__icon {
 		height: 3.2rem;
-		width: 5.5rem;
-		
+		width: auto;
     	text-align: center;
+    	position: absolute;
+    	right: 10px;
 
     	@media(min-width: @sm-min) {
     		width: auto; 
@@ -134,7 +150,7 @@
 	}
 
 	h3+.portlet__description {
-	  padding-top: 0.3rem;
+	  padding-top: 0rem;
 	}
 
 	ul {
@@ -179,7 +195,7 @@
 
 	&-account {
 	  .portlet__description {
-		padding-right: 6rem;
+		padding-right: 5rem;
 	  }
 
 	  .portlet__icon {
@@ -226,6 +242,12 @@
 	  }
 
 	  .portlet__icon {
+	  	right: 5px;
+
+	  	@media(min-width: @sm-min) {
+	  		right: 10px; 
+	  	}
+	  	    
 		  svg {
 			  width: 5rem;
 			  height: 4.4rem;
@@ -264,7 +286,7 @@
 	&-small {
 	  .portlet__container {
 		.align-items(center);
-		height: 6rem;
+		height: 5.5rem;
 	  }
 
 	  svg {

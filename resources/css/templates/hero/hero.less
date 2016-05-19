@@ -14,6 +14,19 @@
   &--container {
     .container();
     padding: 0 !important;
+    position: relative;
+    min-height: 150px;
+
+
+   @media(min-width: @xs-min) {
+     height: 214px; 
+   }
+       
+
+    @media(min-width: @md-min) { 
+      height: 327px;  
+    }
+        
   }
 
   .hero__content {
@@ -25,10 +38,11 @@
       width: 100%;
       position: relative;
       overflow: hidden;
-      padding: 1rem 1rem;
+      //padding: 1rem 1rem;
 
       .flexbox();
       .justify-content(center);
+      .align-items(center);
 
       @media(min-width: @xs-min) {
         .align-items(center);
@@ -60,36 +74,49 @@
   }
 
   .hero__image {
-    max-width: 8.2rem;
-    max-height: 12rem;
+   
     margin-right: 1.5rem;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 116px;
+    margin: 0 10px;
+    top: 50%;
+    transform: translateY(-50%); 
+
+    @media(min-width: @xs-min) {
+      width: 130px;
+      height: 186px;
+      margin: 0 42px;
+    }
 
     @media(min-width: @sm-min) {
-      max-width: 13rem;
-      max-height: 19rem;
-      margin-right: 2.5rem;
+      width: 130px;
+      height: 186px;
+      margin: 0 42px;
     }
 
-    @media(min-width: @md-min) {
-      max-width: 20.4rem;
-      max-height: 29.4rem   
+    @media(min-width: @md-min) { 
+      width: 206px;
+      height: 294px;
+      margin: 0 50px;
     }
+        
         
   }
 
   .hero__slider__container {
-    width: 65%;
+    width: 100%;
+    padding-left: 100px;
 
     @media(min-width: @xs-min) {
-      width: 80%;
+      width: 100%;
+      padding-left: 202px;
     }
 
-    @media(min-width: @sm-min) {
-      width: 70%;
-    }
-
-    @media(min-width: @lg-min) {
-      width: 70%;     
+    @media(min-width: @md-min) {
+      //width: calc(100% - 360px);
+      padding-left: 357px;    
     }
         
   }
@@ -105,6 +132,7 @@
     p {
       font-size: 1.4rem;
       line-height: 1.4;
+      padding-right: 1.5rem;
 
       @media(min-width: @xs-min) {
         width: 80%;
@@ -124,7 +152,9 @@
       font-size: 1.7rem;
       margin-bottom: 0.4rem;
 
-
+      @media(min-width: @xs-min) {
+        font-size: 2.6rem;
+      }
 
       @media(min-width: @sm-min) {
         font-size: 3.6rem;
@@ -148,7 +178,7 @@
   .slick-dots {
     display: none !important;
 
-    @media(min-width: @sm-min) {
+    @media(min-width: @md-min) {
         display: block !important;
       }
   }

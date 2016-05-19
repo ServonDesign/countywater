@@ -153,5 +153,9 @@ gulp.task('hb', function () {
         .pipe(gulp.dest('./html'));
 });
 
+gulp.task('watchhb', function() {
+    var hbWatch = gulp.watch('./common/*.handlebars', ['hb']);
+});
+
 gulp.task('build', ['browserify', 'less']);
-gulp.task('watch', ['styleguide', 'watchify', 'watchLess', 'hb']);
+gulp.task('watch', ['styleguide', 'watchify', 'watchLess', 'watchhb']);

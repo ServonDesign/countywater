@@ -19,8 +19,14 @@
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 
-    padding-top: 0;
+    padding-top: 10&;
     overflow: visible;
+    //transform: translateY(50%);
+
+    @media(min-width: @xs-min) {
+        //transform: translateY(50%); 
+    }
+        
 
     @media(min-width: @sm-min) {
         padding: 6rem 0;
@@ -32,7 +38,7 @@
     }
 
     @media(min-width: @lg-min) {
-        padding-top: 12rem;       
+        padding-top: 13rem;       
     }
         
 }
@@ -162,7 +168,7 @@
 
     position: absolute;
     //top: 50%;
-    top: 100%;
+    //top: 100%;
 
     display: inline-block;
 
@@ -179,7 +185,7 @@
     background: transparent;
 
     @media(min-width: @sm-min) {
-       top: 80%; 
+       //top: 80%; 
     }
         
 
@@ -245,20 +251,25 @@
     right: 1.7rem;
     width: 2.2rem;
     height: 3.2rem;
+    bottom: -1.8rem;
 
     @media(min-width: @xs-min) {
-        right: 1rem;
+        right: 1.5rem;
+        bottom: -4.8rem;
     }
         
 
     @media(min-width: @sm-min) {
         width: 3.8rem;
         height: 4.4rem;
-        right: 0;
+        right: 1.3rem;
+        bottom: 1.8rem;
     }
 
     @media(min-width: @md-min) {
         width: 7.6rem;
+        right: 5px;
+        bottom: 1.8rem;
     }
         
 }
@@ -326,9 +337,11 @@
 
     //width: 100%;
     padding: 0;
+    top: 4px;
+    right: 10px;
 
     list-style: none;
-    text-align: center;
+    text-align: center;       
 }
 .slick-dots li
 {
@@ -336,9 +349,9 @@
 
     display: inline-block;
 
-    width: 20px;
-    height: 20px;
-    //margin: 0 5px;
+    width: 13px;
+    height: 13px;
+    margin: 0 3px;
     padding: 0;
 
     cursor: pointer;
