@@ -25,9 +25,9 @@
 
 	&-small {
 
-	  height: 6rem;
+	  height: auto;
 
-	  @media(min-width: @xs-min) {
+	  @media(min-width: @sm-min) {
 		height: 9.2rem;
 	  }
 
@@ -113,15 +113,23 @@
 		width: auto;
     	text-align: center;
     	position: absolute;
-    	right: 10px;
+    	right: 12px;
+		top: 12px;
 
     	@media(min-width: @sm-min) {
     		width: auto; 
+
     	}
 
     	@media(min-width: @md-min) {
     		width: 5.5rem;
+    		right: 5px; 
     	}
+
+    	@media(min-width: @lg-min) { 
+    		right: 5px;  
+    	}
+    	    
     	    
 
 		svg {
@@ -199,13 +207,26 @@
 	  }
 
 	  .portlet__icon {
+
+		top: 7px;
+
+		@media(min-width: @xs-min) {
+			top: 3px;   
+		}
+		    
+
+		@media(min-width: @lg-min) { 
+			top: 7px;  
+		}
+		    
+
 		  svg {
 
 		  	width: 3.2rem;
 			height: 4.4rem;
 
 		  	@media(min-width: @sm-min) {
-		  		width: 5rem;
+		  		width: 3.2rem;
 			  	height: 4.4rem; 
 		  	}
 		  	    
@@ -273,6 +294,11 @@
 	  }
 	  .portlet__description {
 		padding-right: 5rem;
+
+		@media(min-width: @md-min) {
+			padding-right: 8rem 
+		}
+		    
 	  }
 	}
 
@@ -316,16 +342,22 @@
 	.align-items(baseline);
   }
 
+
+
   .portlet__content {
-	width: 100%;
+	width: 100%%;
 	overflow-y: hidden;
 
+	@media(min-width: @xs-min) {
+		width: 100%;
+	}
+	    
 	@media(min-width: @sm-min) {
 	  width: 100%;
 	}
 
 	@media(min-width: @md-min) {
-	  width: 97%;
+	  width: 96%;
 	}
 
 	.portlet__title {
@@ -349,11 +381,16 @@
 	height: 1.8rem;
 	margin-right: 0.5rem;
 	margin-top: 5px;
-	left: 0px;
+	left: 0;
+	top: 0;
+	right: auto;
+	position: relative;
+	width: auto;
 
-	@media(min-width: @md-min) {
-	  //margin-right: 0;
+	@media(min-width: @lg-min) { 
+		left: 0;  
 	}
+	    
 
 	svg {
 	  width: 1.8rem;
@@ -517,7 +554,7 @@
 
   .portlet-account {
 	.portlet__content {
-	  padding-right: 6rem;
+	  //padding-right: 6rem;
 	}
   }
 
@@ -536,7 +573,12 @@
 
 	.portlet__icon {
 	  position: absolute;
-	  right: 1rem;
+	  right: 1.5rem;
+
+	  @media(min-width: @md-min) {
+	  	right: 0.5rem;
+	  }
+	      
 	}
 
 	p {
@@ -545,5 +587,13 @@
 	}
   }
 
+}
 
+.portlet__icon--alert {
+	top: 12px;
+
+	@media(min-width: @sm-min) {
+		top: 0; 
+	}
+	    
 }

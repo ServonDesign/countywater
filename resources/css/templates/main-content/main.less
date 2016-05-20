@@ -27,13 +27,43 @@
 .main__subcontent {
   .portlet__title {
     @media(min-width: @md-min) {
-      padding-right: 5rem; 
+      padding-right: 3rem; 
     }
 
     @media(min-width: @lg-min) {
       padding-right: 2rem; 
     }
         
+  }
+
+  .portlet:not(.portlet-account) .portlet__title {
+    @media(min-width: @md-min) {
+      padding-right: 4rem; 
+    } 
+  }
+
+  .portlet-account .portlet__title {
+    padding-right: 4rem; 
+  }
+}
+
+.main__content {
+  .portlet-bill .portlet__content {
+
+    padding-right: 5rem; 
+
+    @media(min-width: @md-min) {
+      padding-right: 5rem; 
+    }
+
+    @media(min-width: @lg-min) {
+      padding-right: 8rem;
+    }
+        
+  }
+
+  .portlet-bill .portlet__icon {
+    top: 7px;
   }
 }
 

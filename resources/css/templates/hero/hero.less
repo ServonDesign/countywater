@@ -39,6 +39,7 @@
       position: relative;
       overflow: hidden;
       //padding: 1rem 1rem;
+      min-height: 150px;
 
       .flexbox();
       .justify-content(center);
@@ -46,10 +47,15 @@
 
       @media(min-width: @xs-min) {
         .align-items(center);
+        height: 214px; 
       }
 
       @media(min-width: @sm-min) {
         .justify-content(space-around);
+      }
+
+      @media(min-width: @md-min) { 
+        height: 327px;  
       }
 
 

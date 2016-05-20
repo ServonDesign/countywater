@@ -15,7 +15,7 @@
   &--container {
     .container();
     padding: 0 !important;
-    height: 4.6rem;
+    //min-height: 4.6rem;
 
     .alert__announcement {
       background-color: @red;
@@ -28,10 +28,17 @@
       color: @white;
       margin: 0;
       font-family: 'bariol bold';
-      line-height: 4.6rem;
+      position: relative;
+      padding: 1rem 0;
 
       span {
-        display: block;
+        display: inline-block;
+        //line-height: 1rem;
+
+        @media(min-width: @xs-min) {
+          //line-height: 4.6rem;
+        }
+            
 
         @media(min-width: @sm-min) {
           display: inline-block;
