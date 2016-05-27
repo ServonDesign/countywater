@@ -7,13 +7,13 @@
   color: @white;
 
   @media(min-width: @sm-min) {
-    margin: 0 5rem; 
+    margin: 0 5rem;
   }
 
-  @media(min-width: @lg-min) { 
-    margin: 0;  
+  @media(min-width: @lg-min) {
+    margin: 0;
   }
-      
+
   &--container {
     .container();
     padding: 0 !important;
@@ -38,29 +38,29 @@
 
     @media(min-width: @xs-min) {
       padding-bottom: 1.2rem;
-      .flex-direction(row); 
+      .flex-direction(row);
     }
 
     @media(min-width: @xs-max) {
       padding-bottom: 1.2rem;
-      .flex-direction(column); 
+      .flex-direction(column);
     }
 
 
     @media(min-width: @sm-min) {
       padding-bottom: 1.2rem;
-      .flex-direction(row); 
+      .flex-direction(row);
     }
 
     @media(min-width: @sm-max) {
       padding-bottom: 1.2rem;
-      .flex-direction(row); 
+      .flex-direction(row);
     }
 
     @media(min-width: @md-min) {
-      .flex-direction(row); 
+      .flex-direction(row);
     }
-        
+
 
     @media(min-width: @lg-min) {
       .flex-direction(row);
@@ -87,7 +87,7 @@
       @media(min-width: @xs-min) {
         max-height: 86rem !important;
       }
-          
+
 
       @media(min-width: @sm-min) {
         max-height: 86rem !important;
@@ -101,6 +101,14 @@
     margin: 0 -2rem;
     padding: 2.3rem 0 0;
 
+    p {
+      margin: 0 0 0.6rem;
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+
     @media(min-width: @xs-min) {
       //margin: 0 2rem;
     }
@@ -110,10 +118,9 @@
       padding: 1.3rem 0 0;
     }
 
-    @media(min-width: @lg-min) { 
+    @media(min-width: @lg-min) {
       padding: 23px 0 9px;
     }
-        
 
     a {
       color: @white;
@@ -126,26 +133,26 @@
 
     span {
       display: block;
-      margin-bottom: 1.5rem;  
+      margin-bottom: 1.5rem;
       width: 100%;
       padding: 0 5%;
 
       @media(min-width: @xs-min) {
-        width: 68%; 
-        margin: 0 auto 1rem; 
+        width: 68%;
+        margin: 0 auto 1rem;
       }
 
       @media(min-width: @sm-min) {
         width: 100%;
-         margin: 0 auto 6px; 
+         margin: 0 auto 6px;
       }
 
-      @media(min-width: @lg-min) { 
+      @media(min-width: @lg-min) {
         margin: 0 auto 6px;
       }
-          
-          
-          
+
+
+
 
       &:first-child {
         //margin-bottom: 1.2rem;
@@ -153,7 +160,7 @@
         @media(min-width: @md-min) {
           //margin-bottom: 0;
         }
-            
+
       }
     }
   }
@@ -187,26 +194,26 @@
     margin-bottom: 1rem;
 
     @media(min-width: @xs-min) {
-      width: auto; 
+      width: auto;
     }
-        
+
 
     @media(min-width: @sm-min) {
       margin-bottom: 0;
       width: auto;
     }
 
-    @media(min-width: @lg-min) { 
-      width: 18rem;  
+    @media(min-width: @lg-min) {
+      width: 18rem;
     }
-        
+
 
     &:last-child {
       width: auto;
 
       @media(min-width: @lg-min) {
         width: 34rem;
-      }  
+      }
     }
 
     li {
